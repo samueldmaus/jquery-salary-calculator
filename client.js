@@ -4,7 +4,6 @@ $(document).ready(readyNow);
 
 let employeeArray = [];
 
-let totalMonthlyEmployeeSalaries = 0;
 
 function readyNow() {
     $('#submitButton').on('click', addToEmployeeTable)
@@ -23,7 +22,7 @@ function addToEmployeeTable() {
         lName: lastName,
         id: employeeID,
         title: employeeTitle,
-        salary: employeeAnnualSalary,
+        salary: Number(employeeAnnualSalary),
     }
     employeeArray.push(newEnteredEmployee);
     $('#employeeInformation').empty();
@@ -47,7 +46,8 @@ function addToEmployeeTable() {
 }
 
 function addUpTotalMonthlySalaries() {
-    totalMonthlyEmployeeSalaries = 0;
+    $('#totalMonthlyEmployeeSalaries').empty();
+    let totalMonthlyEmployeeSalaries = 0;
     for(let j = 0; j < employeeArray.length; j++) {
         totalMonthlyEmployeeSalaries += employeeArray[j].salary;
     }
