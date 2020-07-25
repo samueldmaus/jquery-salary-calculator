@@ -26,6 +26,7 @@ function addToEmployeeTable() {
         salary: employeeAnnualSalary,
     }
     employeeArray.push(newEnteredEmployee);
+    $('#employeeInformation').empty();
     for(let i = 0; i < employeeArray.length; i++) {
         $('#employeeInformation').append(
             `<tr>
