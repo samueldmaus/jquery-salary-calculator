@@ -1,9 +1,24 @@
+body {
+    font-family: sans-serif;
+}
 #submitButton {
     float: right;
+    width: 100px;
+    height: 25px;
+}
+#submitButton: hover {
+    background-color: grey;
 }
 #totalMonthSalary {
     float: right;
 }
 .tooExpensive {
     background-color: red;
+}
+header {
+    text-align: center;
+    background-color: grey;
+    height: 75px;
+    color: white;
+    text-shadow: 2px 1px black;
 }
