@@ -8,6 +8,7 @@ let employeeArray = [];
 function readyNow() {
     $('#submitButton').on('click', addToEmployeeTable)
     $('#submitButton').on('click', addUpTotalMonthlySalaries)
+    $('#employeeInformation').on('click', '.deleteButton', deleteEmployeeInfo)
 }
 
 function addToEmployeeTable() {
@@ -28,13 +29,13 @@ function addToEmployeeTable() {
     $('#employeeInformation').empty();
     for(let i = 0; i < employeeArray.length; i++) {
         $('#employeeInformation').append(
-            `<tr>
+            `<tr class="employeeTableData">
                 <td>${employeeArray[i].fName}</td>
                 <td>${employeeArray[i].lName}</td>
                 <td>${employeeArray[i].id}</td>
                 <td>${employeeArray[i].title}</td>
                 <td>${employeeArray[i].salary}</td>
-                <td><button id="deleteButton">Delete</button></td>
+                <td><button class="deleteButton">Delete</button></td>
             </tr>`
         )
     }
@@ -56,4 +57,8 @@ function addUpTotalMonthlySalaries() {
     if(totalMonthlyEmployeeSalaries > 20000) {
         $('#totalMonthSalary').addClass('tooExpensive');
     }
+}
+
+function deleteEmployeeInfo() {
+    $(this).closest('tr').remove();
 }
