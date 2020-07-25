@@ -34,7 +34,7 @@ function addToEmployeeTable() {
                 <td>${employeeArray[i].id}</td>
                 <td>${employeeArray[i].title}</td>
                 <td>${employeeArray[i].salary}</td>
-                <td><button id="deleteButton>Delete</button></td>
+                <td><button id="deleteButton">Delete</button></td>
             </tr>`
         )
     }
@@ -47,9 +47,13 @@ function addToEmployeeTable() {
 
 function addUpTotalMonthlySalaries() {
     $('#totalMonthlyEmployeeSalaries').empty();
-    let totalMonthlyEmployeeSalaries = 0;
+    let totalSalaries = 0;
     for(let j = 0; j < employeeArray.length; j++) {
-        totalMonthlyEmployeeSalaries += employeeArray[j].salary;
+        totalSalaries += employeeArray[j].salary;
     }
-    $('#totalMonthlyEmployeeSalaries').append(Number(totalMonthlyEmployeeSalaries));
+    totalMonthlyEmployeeSalaries = totalSalaries/12;
+    $('#totalMonthlyEmployeeSalaries').append(Number(totalMonthlyEmployeeSalaries).toFixed(2));
+    if(totalMonthlyEmployeeSalaries > 20000) {
+        $('#totalMonthSalary').addClass('tooExpensive');
+    }
 }

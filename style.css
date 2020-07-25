@@ -4,3 +4,6 @@
 #totalMonthSalary {
     float: right;
 }
+.tooExpensive {
+    background-color: red;
+}
