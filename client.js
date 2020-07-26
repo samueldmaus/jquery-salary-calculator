@@ -11,8 +11,8 @@ function readyNow() {
     $('#employeeInformation').on('click', '.deleteButton', deleteEmployeeInfo)
 }
 
+// Grab inputs and iterate over them in order to append to DOM
 function addToEmployeeTable() {
-    
     let firstName = $('#employeeFirstName').val();
     let lastName = $('#employeeLastName').val();
     let employeeID = $('#employeeID').val();
@@ -46,6 +46,7 @@ function addToEmployeeTable() {
     $('#employeeSalary').val('');
 }
 
+// calculate Monthly Salary Totals
 function addUpTotalMonthlySalaries() {
     $('#totalMonthlyEmployeeSalaries').empty();
     let totalSalaries = 0;
@@ -59,6 +60,7 @@ function addUpTotalMonthlySalaries() {
     }
 }
 
+// Delete data row when delete button is clicked
 function deleteEmployeeInfo() {
     $(this).closest('tr').remove();
 }
