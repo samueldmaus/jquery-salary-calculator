@@ -62,12 +62,17 @@ function addUpTotalMonthlySalaries() {
 
 // Delete data row when delete button is clicked
 function deleteEmployeeInfo() {
-    $(this).closest('tr').remove();
-    let deletedEmployee = $(this).parent();
-    employeeArray.splice(employeeArray.indexOf(deletedEmployee.data()), 1);
-    redoAddEmployees();
+    // $(this).closest('tr').remove();
+    let deletedEmployee = $(this).parent().first('td');
+    deletedEmployee.text('deleted');
+
+
+
+
+   // redoAddEmployees();
 }
 
+/*
 function redoAddEmployees() {
     $('#employeeInformation').empty();
     for(let i = 0; i < employeeArray.length; i++) {
@@ -84,3 +89,4 @@ function redoAddEmployees() {
     }
     addUpTotalMonthlySalaries();
 }
+*/
