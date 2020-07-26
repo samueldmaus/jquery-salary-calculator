@@ -65,4 +65,21 @@ function deleteEmployeeInfo() {
     let deletedEmployee = $(this).closest('tr');
     $(this).closest('tr').remove();
     employeeArray.splice(deletedEmployee.data(), 1);
+    redoAddEmployees();
+}
+
+function redoAddEmployees() {
+    $('#employeeInformation').empty();
+    for(let i = 0; i < employeeArray.length; i++) {
+        $('#employeeInformation').append(
+            `<tr class="employeeTableData">
+                <td>${employeeArray[i].fName}</td>
+                <td>${employeeArray[i].lName}</td>
+                <td>${employeeArray[i].id}</td>
+                <td>${employeeArray[i].title}</td>
+                <td>$${employeeArray[i].salary}</td>
+                <td><button class="deleteButton">Delete</button></td>
+            </tr>`
+        )
+    }
 }
