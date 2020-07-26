@@ -62,31 +62,27 @@ function addUpTotalMonthlySalaries() {
 
 // Delete data row when delete button is clicked
 function deleteEmployeeInfo() {
-    // $(this).closest('tr').remove();
-    let deletedEmployee = $(this).parent().first('td');
-    deletedEmployee.text('deleted');
-
-
-
-
-   // redoAddEmployees();
+    // $(this).closest('tr').remove(); //removes info from DOM
+    let deletedEmployee = $(this).closest('tr');
+    console.log(employeeArray.splice(deletedEmployee.data('deletedInfo'), 1))
+    // redoAddEmployees();
 }
 
-/*
+
 function redoAddEmployees() {
     $('#employeeInformation').empty();
-    for(let i = 0; i < employeeArray.length; i++) {
+    for(let k = 0; k < employeeArray.length; k++) {
+        $('#employeeInformation').data('deletedInfo', i);
         $('#employeeInformation').append(
             `<tr class="employeeTableData">
-                <td>${employeeArray[i].fName}</td>
-                <td>${employeeArray[i].lName}</td>
-                <td>${employeeArray[i].id}</td>
-                <td>${employeeArray[i].title}</td>
-                <td>$${employeeArray[i].salary}</td>
+                <td>${employeeArray[k].fName}</td>
+                <td>${employeeArray[k].lName}</td>
+                <td>${employeeArray[k].id}</td>
+                <td>${employeeArray[k].title}</td>
+                <td>$${employeeArray[k].salary}</td>
                 <td><button class="deleteButton">Delete</button></td>
             </tr>`
         )
     }
     addUpTotalMonthlySalaries();
 }
-*/
