@@ -33,4 +33,9 @@ td {
 }
 th {
     border: 1px solid black;
+    background-color: lightgrey;
+    height: 15px;
+}
+#inputInformation {
+    width: 100%;
 }

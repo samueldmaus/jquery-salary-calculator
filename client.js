@@ -34,7 +34,7 @@ function addToEmployeeTable() {
                 <td>${employeeArray[i].lName}</td>
                 <td>${employeeArray[i].id}</td>
                 <td>${employeeArray[i].title}</td>
-                <td>${employeeArray[i].salary}</td>
+                <td>$${employeeArray[i].salary}</td>
                 <td><button class="deleteButton">Delete</button></td>
             </tr>`
         )
@@ -62,5 +62,7 @@ function addUpTotalMonthlySalaries() {
 
 // Delete data row when delete button is clicked
 function deleteEmployeeInfo() {
+    let deletedEmployee = $(this).closest('tr');
     $(this).closest('tr').remove();
+    employeeArray.splice(deletedEmployee.data(), 1);
 }
