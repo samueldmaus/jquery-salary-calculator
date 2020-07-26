@@ -25,6 +25,7 @@ In order to delete an employee, click the corresponding 'Delete' button for that
 2. Clone repository to machine using terminal
 3. Open index.html in browser
 4. Enter employee(s) information in corresponding input fields
+5. Enjoy the app
 
 ## Acknowledgement
 Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality.
