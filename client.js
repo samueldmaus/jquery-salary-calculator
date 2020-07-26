@@ -62,9 +62,9 @@ function addUpTotalMonthlySalaries() {
 
 // Delete data row when delete button is clicked
 function deleteEmployeeInfo() {
-    let deletedEmployee = $(this).closest('tr');
     $(this).closest('tr').remove();
-    employeeArray.splice(deletedEmployee.data(), 1);
+    let deletedEmployee = $(this).parent();
+    employeeArray.splice(employeeArray.indexOf(deletedEmployee.data()), 1);
     redoAddEmployees();
 }
 
@@ -82,4 +82,5 @@ function redoAddEmployees() {
             </tr>`
         )
     }
+    addUpTotalMonthlySalaries();
 }
