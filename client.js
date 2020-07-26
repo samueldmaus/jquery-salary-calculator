@@ -64,8 +64,8 @@ function addUpTotalMonthlySalaries() {
 function deleteEmployeeInfo() {
     // $(this).closest('tr').remove(); //removes info from DOM
     let deletedEmployee = $(this).closest('tr');
-    console.log(employeeArray.splice(deletedEmployee.data('deletedInfo'), 1))
-    // redoAddEmployees();
+    console.log(employeeArray.splice(deletedEmployee.data('deletedInfo'), 1)) // always takes out the first object for some reason
+    // redoAddEmployees(); // don't run yet
 }
 
 
