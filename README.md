@@ -32,4 +32,3 @@ Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped m
 ## Support
 If you have suggestions or issues, please email me at samueldmaus@gmail.com
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
