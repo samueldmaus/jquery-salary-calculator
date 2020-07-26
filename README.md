@@ -22,8 +22,8 @@ In order to delete an employee, click the corresponding 'Delete' button for that
 
 ## Installation
 1. Fork repository
-2. Clone repository to machine
-3. Open index.html
+2. Clone repository to machine using terminal
+3. Open index.html in browser
 4. Enter employee(s) information in corresponding input fields
 
 ## Acknowledgement
